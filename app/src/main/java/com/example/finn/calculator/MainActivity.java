@@ -98,7 +98,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.btn_point:
                 if (clear_flag) {
                     clear_flag = false;
-                    et_input.setText("");
+                    str = "";
+                    et_input.setText(str);
                 }
                 et_input.setText(str+((Button)v).getText());
                 break;
@@ -109,9 +110,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 if (clear_flag) {
                     clear_flag = false;
                     str="";
-                    et_input.setText("");
+                    et_input.setText(str);
                 }
                 et_input.setText(str + " " + ((Button)v).getText() + " ");
+                break;
             case R.id.btn_equal:
                 getResult();
                 break;
